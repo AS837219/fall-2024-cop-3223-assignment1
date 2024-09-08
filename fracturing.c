@@ -2,10 +2,16 @@
 //Written by: Ashton Avant
 //Date Written: 9/8/2024
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 #define PI = 3.14159
+
+double askForUserInput() {
+    double input = 0;
+    scanf("%lf", &input);
+    return input;
+}
 
 double calculateDistance() {
     double x1 = askForUserInput();
@@ -13,9 +19,12 @@ double calculateDistance() {
     double x2 = askForUserInput();
     double y2 = askForUserInput();
     
-    printf("Point #1 entered: x1 =  %f", x1, "; y1 = %f\n", y1);
-    printf("Point #2 entered: x2 =  %f", x2, "; y2 = %f\n", y2);
-    printf("The distance between the two points is %d\n", sqrt((pow(x1, 2) + pow(x2, 2)) + (pow(y1, 2) + pow(y2, 2))));
+    printf("Point #1 entered: x1 =  %lf", x1);
+    printf("; y1 = %lf\n", y1);
+    printf("Point #2 entered: x2 =  %lf", x2);
+    printf("; y2 = %lf\n", y2);
+    printf("The distance between the two points is %lf\n", sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)));
+    return 0;
 }
 
 double calculatePerimeter() {
@@ -32,10 +41,6 @@ double calculateWidth() {
 
 double calculateHeight() {
     
-}
-
-double askForUserInput() {
-    return scanf("%f");
 }
 
 int main(int argc, char **argv) {
